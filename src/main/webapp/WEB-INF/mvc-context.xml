@@ -12,6 +12,8 @@
         http://www.springframework.org/schema/mvc
         https://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
+    <bean id="/hello" class="com.example.mvc.controller.HelloController"/>
+
     <mvc:annotation-driven/>
     <context:component-scan base-package="com.example.mvc.controller"/>
 
