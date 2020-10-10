@@ -13,7 +13,14 @@
         https://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
     <bean id="/hello" class="com.example.mvc.controller.HelloController"/>
-
+    <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+            <props>
+                <prop key="/health">healthController</prop>
+            </props>
+        </property>
+    </bean>
+    <bean id="healthController" class="com.example.mvc.controller.HealthController"/>
     <mvc:annotation-driven/>
     <context:component-scan base-package="com.example.mvc.controller"/>
 
